@@ -72,6 +72,11 @@ public abstract class AbstractAppendVisitor implements IAppendVisitor {
         return this;
     }
 
+    public IAppendVisitor visit(boolean b) {
+        builder.append(b);
+        return this;
+    }
+
     public IAppendVisitor visit(long[] l) {
         builder.append(startBag());
         for (int i = 0; i < l.length - 1; i++) {

@@ -265,7 +265,7 @@ class ServiceRelatedMessage extends MessageTemplate {
         sb.append(" ").append(location).append(", ").append(baseParts[1]);
         sb.append(" ").append(vendor).append(", ").append(baseParts[2]).append(" ");
         sb.append(baseParts[3]).append(" ").append(baseParts[4]).append(" ").append(baseParts[5]);
-        return new Message(sb.toString().toCharArray(), topics);
+        return new Message(sb.toString().toCharArray(), topics, isPositive);
     }
 
     private void getBasicMsgParts(boolean isPositive) { //[0]=Activity_Verb [1]=Feeling_Verb [2]=Con1 [3]=Jargon [4]=Con2 [5]=Adj
@@ -402,7 +402,7 @@ class DeviceRelatedMessage extends MessageTemplate {
         sb.append(" ").append(device).append(" ").append(rTime).append(", ").append(baseParts[1]);
         sb.append(" ").append(baseParts[2]).append(" ");
         sb.append(part).append(", ").append(baseParts[3]).append(" ").append(baseParts[4]);
-        return new Message(sb.toString().toCharArray(), topics);
+        return new Message(sb.toString().toCharArray(), topics, isPositive);
     }
 
     private void getBasicMsgParts(boolean isPositive) { //[0]=Activity_Verb [1]=Feeling_Verb [2]=Con1 [3]=Con2 [4]=Adj

@@ -23,10 +23,13 @@ public class Message {
     private List<String> referredTopics;
     private int length;
 
-    public Message(char[] m, List<String> referredTopics) {
+    private boolean isPositive;
+
+    public Message(char[] m, List<String> referredTopics, boolean isPositive) {
         System.arraycopy(m, 0, message, 0, m.length);
         length = m.length;
         this.referredTopics = referredTopics;
+        this.isPositive = isPositive;
     }
 
     public Message() {
@@ -40,6 +43,10 @@ public class Message {
 
     public List<String> getReferredTopics() {
         return referredTopics;
+    }
+
+    public boolean isPositive() {
+        return isPositive;
     }
 
     public void reset(char[] m, int offset, int length, List<String> referredTopics) {

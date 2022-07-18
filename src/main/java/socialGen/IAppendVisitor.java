@@ -43,6 +43,8 @@ public interface IAppendVisitor {
 
     IAppendVisitor visit(long[] l);
 
+    IAppendVisitor visit(boolean b);
+
     IAppendVisitor visit(Date date);
 
     IAppendVisitor visit(DateTime datetime);

@@ -56,7 +56,7 @@ public class JsonAppendVisitor extends AbstractAppendVisitor implements IAppendV
     }
 
     public IAppendVisitor visit(Point point) {
-        builder.append("\"").append(point.getLatitude()).append(",").append(point.getLongitude()).append("\"");
+        builder.append("{ \"type\":\"Point\", \"coordinates\": [").append(point.getLatitude()).append(", ").append(point.getLongitude()).append("] }");
         return this;
     }
 }

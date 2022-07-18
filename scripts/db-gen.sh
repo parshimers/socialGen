@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $# -lt 3 ]
 then
    echo  "Usage DataGenerator <SOCIAL_GEN_HOME> <SOCIAL_GEN_LOCAL_HOME> <partition>"

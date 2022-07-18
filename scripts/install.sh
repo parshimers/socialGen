@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ -z $SOCIAL_GEN_HOME ]
 then 
   echo "SOCIAL_GEN_HOME is not defined"
