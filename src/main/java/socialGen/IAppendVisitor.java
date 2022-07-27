@@ -51,7 +51,7 @@ public interface IAppendVisitor {
 
     IAppendVisitor visit(Message message);
 
-    IAppendVisitor visit(Point point);
+    IAppendVisitor visit(Point point,boolean isGeo);
 
     IAppendVisitor visit(Employments employments);
 

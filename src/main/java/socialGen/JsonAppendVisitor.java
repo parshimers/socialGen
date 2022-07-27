@@ -55,8 +55,12 @@ public class JsonAppendVisitor extends AbstractAppendVisitor implements IAppendV
         return this;
     }
 
-    public IAppendVisitor visit(Point point) {
-        builder.append("{ \"type\":\"Point\", \"coordinates\": [").append(point.getLatitude()).append(", ").append(point.getLongitude()).append("] }");
+    public IAppendVisitor visit(Point point, boolean isGeo) {
+        if(isGeo){
+            builder.append("\"POINT (").append(point.getLatitude()).append(" ").append(point.getLongitude()).append(")\"");
+        }else{
+            builder.append("point(\"").append(point.getLatitude()).append(", ").append(point.getLongitude()).append("\")");
+        }
         return this;
     }
 }

@@ -1,6 +1,9 @@
 .DS_Store
 output/
 src/.DS_Store
+conf/
+p1/
+artifacts/
 
 .metadata
 bin/
